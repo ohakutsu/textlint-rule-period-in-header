@@ -1,0 +1,49 @@
+{
+  "name": "textlint-rule-period-in-header",
+  "version": "0.1.0",
+  "description": "textlint rule that check with or without period in header.",
+  "keywords": [
+    "textlintrule"
+  ],
+  "homepage": "https://github.com/ohakutsu/textlint-rule-period-in-header",
+  "bugs": {
+    "url": "https://github.com/ohakutsu/textlint-rule-period-in-header/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "ohakutsu",
+    "url": "https://twitter.com/ohakutsu"
+  },
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ohakutsu/textlint-rule-period-in-header.git"
+  },
+  "scripts": {
+    "build": "textlint-scripts build",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --list-different --write .",
+    "prepublish": "pnpm run build",
+    "test": "textlint-scripts test"
+  },
+  "dependencies": {
+    "check-ends-with-period": "^3.0.2"
+  },
+  "devDependencies": {
+    "@textlint/types": "^13.4.0",
+    "prettier": "^3.0.3",
+    "textlint-scripts": "^13.4.0",
+    "textlint-tester": "^13.4.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "textlint": ">=13.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "pnpm@8.10.3"
+}
