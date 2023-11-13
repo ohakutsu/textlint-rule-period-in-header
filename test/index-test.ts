@@ -29,6 +29,9 @@ tester.run("textlint-rule-period-in-header", rule, {
         periodMark: ".",
       },
     },
+    "# text!",
+    "# text?",
+    "# text (foobar)",
   ],
   invalid: [
     {
