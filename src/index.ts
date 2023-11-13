@@ -5,14 +5,23 @@ import type {
 import { checkEndsWithPeriod } from "check-ends-with-period";
 
 const checkEndsWithoutPeriod = (text: string, periodMarks: string[]) => {
-  const { index, periodMark, valid } = checkEndsWithPeriod(text, {
+  const { index, periodMark } = checkEndsWithPeriod(text, {
     periodMarks,
   });
+
+  const isPeriodMarkAtEnd = periodMarks.indexOf(periodMark) !== -1;
+  if (isPeriodMarkAtEnd) {
+    return {
+      index,
+      periodMark,
+      valid: false,
+    };
+  }
 
   return {
     index,
     periodMark,
-    valid: !valid,
+    valid: true,
   };
 };
 
@@ -54,10 +63,11 @@ const reporter: TextlintRuleReporter<Options> = (context, options = {}) => {
       }
 
       // Prefer to use period
-      const { index, periodMark, valid } = checkEndsWithPeriod(text, {
+      const { index, periodMark, valid } = checkEndsWithoutPeriod(
+        text,
         periodMarks,
-      });
-      if (valid) {
+      );
+      if (!valid) {
         if (periodMark === preferPeriodMark) {
           return;
         }
