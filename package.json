@@ -1,6 +1,6 @@
 {
   "name": "textlint-rule-period-in-header",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "textlint rule that check with or without period in header.",
   "keywords": [
     "textlintrule"
