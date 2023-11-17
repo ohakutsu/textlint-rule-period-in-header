@@ -1,5 +1,7 @@
 # textlint-rule-period-in-header
 
+[![textlint rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/)
+
 textlint rule that check with or without period in header.
 
 By default, no period mark at end of header.
