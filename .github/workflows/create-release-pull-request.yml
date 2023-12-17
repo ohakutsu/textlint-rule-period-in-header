@@ -34,19 +34,19 @@ jobs:
           node-version: 20
       - name: Update version
         run: pnpm version "${{ inputs.semver }}" --no-git-tag-version
-      - name: Set release version
-        run: echo "RELEASE_VERSION=$(cat package.json | jq -r '.version')" >> "$GITHUB_ENV"
+      - name: Set package version
+        run: echo "PACKAGE_VERSION=$(cat package.json | jq -r '.version')" >> "$GITHUB_ENV"
       - uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-paths: |
             package.json
-          commit-message: "Release v${{ env.RELEASE_VERSION }}"
-          branch: "release-v${{ env.RELEASE_VERSION }}"
+          commit-message: "Release v${{ env.PACKAGE_VERSION }}"
+          branch: "release-v${{ env.PACKAGE_VERSION }}"
           delete-branch: true
           branch-suffix: timestamp
-          title: "Release v${{ env.RELEASE_VERSION }}"
+          title: "Release v${{ env.PACKAGE_VERSION }}"
           body: |
             ## What
 
-            Release v${{ env.RELEASE_VERSION }}
+            Release v${{ env.PACKAGE_VERSION }}
