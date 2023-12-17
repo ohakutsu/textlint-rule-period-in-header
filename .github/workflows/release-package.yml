@@ -28,10 +28,11 @@ jobs:
         with:
           result-encoding: string
           script: |
-            const tags = await github.rest.repos.listTags({
+            const response = await github.rest.repos.listTags({
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
+            const tags = response.data;
             const existsTag = tags.map(tag => tag.name).includes(`v${process.env.PACKAGE_VERSION}`);
             return existsTag.toString();
 
