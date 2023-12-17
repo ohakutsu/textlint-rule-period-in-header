@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^3.1.1
     version: 3.1.1
   textlint-scripts:
-    specifier: ^13.4.0
-    version: 13.4.0(typescript@5.3.3)
+    specifier: ^13.4.1
+    version: 13.4.1(typescript@5.3.3)
   textlint-tester:
     specifier: ^13.4.1
     version: 13.4.1
@@ -3396,8 +3396,8 @@ packages:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: false
 
-  /textlint-scripts@13.4.0(typescript@5.3.3):
-    resolution: {integrity: sha512-pGxYEEN7nH3lsLN+ZQusHgTGygs0xuthRDjKiN9pQtGB7PVAy9ylcDeLi8wkHuMC6SH7v2oK2Nzb3nsftqXMCQ==}
+  /textlint-scripts@13.4.1(typescript@5.3.3):
+    resolution: {integrity: sha512-THIF7pNNCICZ3SlCac7lh12MDSiJJry6JnrymWNAOPYByQ/RQV+L6LjMrEqshXvKiVxuQjlSfZsIyOZ/NGv0fQ==}
     hasBin: true
     peerDependencies:
       ts-node: '*'
@@ -3689,7 +3689,7 @@ packages:
       require-directory: 2.1.1
       string-width: 4.2.3
       y18n: 5.0.8
-      yargs-parser: 20.2.4
+      yargs-parser: 20.2.9
     dev: true
 
   /yocto-queue@0.1.0:
