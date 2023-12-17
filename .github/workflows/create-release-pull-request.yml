@@ -1,0 +1,52 @@
+name: Create release pull request
+
+on:
+  workflow_dispatch:
+    inputs:
+      semver:
+        description: "Release version"
+        required: true
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Update version
+        run: pnpm version "${{ inputs.semver }}" --no-git-tag-version
+      - name: Set release version
+        run: echo "RELEASE_VERSION=$(cat package.json | jq -r '.version')" >> "$GITHUB_ENV"
+      - uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: |
+            package.json
+          commit-message: "Release v${{ env.RELEASE_VERSION }}"
+          branch: "release-v${{ env.RELEASE_VERSION }}"
+          delete-branch: true
+          branch-suffix: timestamp
+          title: "Release v${{ env.RELEASE_VERSION }}"
+          body: |
+            ## What
+
+            Release v${{ env.RELEASE_VERSION }}
