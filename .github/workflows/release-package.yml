@@ -32,7 +32,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
-            const existsTag = tags.map(tag => tag.name).includes?(`v${process.env.PACKAGE_VERSION}`);
+            const existsTag = tags.map(tag => tag.name).includes(`v${process.env.PACKAGE_VERSION}`);
             return existsTag.toString();
 
   release:
