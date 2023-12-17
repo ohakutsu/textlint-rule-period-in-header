@@ -25,14 +25,15 @@ jobs:
       - name: Check tag
         uses: actions/github-script@v7
         id: check-tag
-        result-encoding: string
-        script: |
-          const tags = github.rest.repos.listTags({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-          });
-          const existsTag = tags.map(tag => tag.name).includes?(`v${process.env.PACKAGE_VERSION}`);
-          return existsTag.toString();
+        with:
+          result-encoding: string
+          script: |
+            const tags = github.rest.repos.listTags({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            const existsTag = tags.map(tag => tag.name).includes?(`v${process.env.PACKAGE_VERSION}`);
+            return existsTag.toString();
 
   release:
     runs-on: ubuntu-latest
