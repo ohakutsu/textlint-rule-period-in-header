@@ -2,7 +2,8 @@ name: Release package
 
 on:
   push:
-    - main
+    branches:
+      - main
 
 permissions:
   contents: read
