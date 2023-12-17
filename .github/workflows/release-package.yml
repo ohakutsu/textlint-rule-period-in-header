@@ -28,7 +28,7 @@ jobs:
         with:
           result-encoding: string
           script: |
-            const tags = github.rest.repos.listTags({
+            const tags = await github.rest.repos.listTags({
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
