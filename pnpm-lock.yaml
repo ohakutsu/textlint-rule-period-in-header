@@ -14,8 +14,8 @@ dependencies:
 
 devDependencies:
   '@textlint/types':
-    specifier: ^13.4.0
-    version: 13.4.0
+    specifier: ^13.4.1
+    version: 13.4.1
   prettier:
     specifier: ^3.1.1
     version: 3.1.1
@@ -1339,6 +1339,9 @@ packages:
   /@textlint/ast-node-types@13.4.0:
     resolution: {integrity: sha512-roVeLjnf8UPntFICb1uEwE2dccC8V/T5N1x7eBxkT3VDmSQkyfIAuGtlpwyH0wNKEwJmjO/2gSm2fCjW5K/rbA==}
 
+  /@textlint/ast-node-types@13.4.1:
+    resolution: {integrity: sha512-qrZyhCh8Ekk6nwArx3BROybm9BnX6vF7VcZbijetV/OM3yfS4rTYhoMWISmhVEP2H2re0CtWEyMl/XF+WdvVLQ==}
+
   /@textlint/ast-tester@13.4.0:
     resolution: {integrity: sha512-dmqlPNxgQNaG63gTcMfF2b2VmQn7gnDN2ytF3c6sFB6YyTsiTh9wA/xsUBKqYWOMlYV5pLuO6TvItcUPCtVtZw==}
     dependencies:
@@ -1394,7 +1397,7 @@ packages:
       '@textlint/ast-traverse': 13.4.0
       '@textlint/feature-flag': 13.4.0
       '@textlint/source-code-fixer': 13.4.0
-      '@textlint/types': 13.4.0
+      '@textlint/types': 13.4.1
       '@textlint/utils': 13.4.0
       debug: 4.3.4(supports-color@8.1.1)
       fast-equals: 4.0.3
@@ -1445,7 +1448,7 @@ packages:
   /@textlint/source-code-fixer@13.4.0:
     resolution: {integrity: sha512-3jR5XPrSzJmSH8sg3XrkCu9sGSR7OOl78zrbX+1d84nDLdRdjLSa90COc4aJWwOMpKycwZhU6XltTqPJWI50rg==}
     dependencies:
-      '@textlint/types': 13.4.0
+      '@textlint/types': 13.4.1
       debug: 4.3.4(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
@@ -1471,6 +1474,12 @@ packages:
     resolution: {integrity: sha512-K7JjP0gUOuRgc7xyfZv2NML7dmzcb9UjoBu0QCgCmJP861ikAd1bONH+qE/3brTi4n8MJq9gO9smGjB2upExMA==}
     dependencies:
       '@textlint/ast-node-types': 13.4.0
+    dev: false
+
+  /@textlint/types@13.4.1:
+    resolution: {integrity: sha512-1ApwQa31sFmiJeJ5yTNFqjbb2D1ICZvIDW0tFSM0OtmQCSDFNcKD3YrrwDBgSokZ6gWQq/FpNjlhi6iETUWt0Q==}
+    dependencies:
+      '@textlint/ast-node-types': 13.4.1
 
   /@textlint/utils@13.4.0:
     resolution: {integrity: sha512-cXm9L3Ol/R5DR0YtHCMBa2PicvOoR5YU8Dx7RDJWHfp2rQvMghd3ogDmeol28s/Ei5oXRHY5HE2rWhYLhwrtVg==}
