@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended",
     ":automergeMinor",
+    ":disableDependencyDashboard",
     ":prHourlyLimit4",
     ":timezone(Asia/Tokyo)",
     ":label(dependencies)",
