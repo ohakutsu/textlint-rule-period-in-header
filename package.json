@@ -43,7 +43,7 @@
     "textlint": ">=13.4.1"
   },
   "engines": {
-    "node": ">=16.20.2"
+    "node": ">=20.18.0"
   },
   "packageManager": "pnpm@8.15.9"
 }
