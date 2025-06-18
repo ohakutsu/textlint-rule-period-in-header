@@ -14,8 +14,8 @@ dependencies:
 
 devDependencies:
   '@textlint/types':
-    specifier: ^13.4.1
-    version: 13.4.1
+    specifier: ^14.8.4
+    version: 14.8.4
   prettier:
     specifier: ^3.1.1
     version: 3.1.1
@@ -1344,6 +1344,9 @@ packages:
     resolution: {integrity: sha512-EYVyA4+G+KRNkNW5nytg61VvNtwy7JXSujGrsb4FB2pTA8Hwq/0n6TMXKVdL29n+EhyMIKmmqHFY1rjBwh3B/A==}
     dev: false
 
+  /@textlint/ast-node-types@14.8.4:
+    resolution: {integrity: sha512-+fI7miec/r9VeniFV9ppL4jRCmHNsTxieulTUf/4tvGII3db5hGriKHC4p/diq1SkQ9Sgs7kg6UyydxZtpTz1Q==}
+
   /@textlint/ast-tester@13.4.1:
     resolution: {integrity: sha512-YSHUR1qDgMPGF5+nvrquEhif6zRJ667xUnfP/9rTNtThIhoTQINvczr5/7xa43F1PDWplL6Curw+2jrE1qHwGQ==}
     dependencies:
@@ -1379,7 +1382,7 @@ packages:
     dependencies:
       '@textlint/kernel': 14.0.2
       '@textlint/module-interop': 14.0.2
-      '@textlint/types': 14.0.2
+      '@textlint/types': 14.8.4
       '@textlint/utils': 14.0.2
       debug: 4.3.4(supports-color@8.1.1)
       rc-config-loader: 4.1.3
@@ -1400,7 +1403,7 @@ packages:
     resolution: {integrity: sha512-9yEZ1rYcwNnqL14p1YCUqQNCKfPDIWB/uQ0v8f7uaWxDqJ4ezaOCTNtVzN3qDdNnKVxMKGm4v/Tv3PEUstqMOQ==}
     dependencies:
       '@textlint/module-interop': 14.0.2
-      '@textlint/types': 14.0.2
+      '@textlint/types': 14.8.4
       chalk: 4.1.2
       debug: 4.3.4(supports-color@8.1.1)
       diff: 5.1.0
@@ -1438,7 +1441,7 @@ packages:
       '@textlint/ast-traverse': 14.0.2
       '@textlint/feature-flag': 14.0.2
       '@textlint/source-code-fixer': 14.0.2
-      '@textlint/types': 14.0.2
+      '@textlint/types': 14.8.4
       '@textlint/utils': 14.0.2
       debug: 4.3.4(supports-color@8.1.1)
       fast-equals: 4.0.3
@@ -1453,7 +1456,7 @@ packages:
       '@azu/format-text': 1.0.2
       '@azu/style-format': 1.0.1
       '@textlint/module-interop': 14.0.2
-      '@textlint/types': 14.0.2
+      '@textlint/types': 14.8.4
       chalk: 4.1.2
       debug: 4.3.4(supports-color@8.1.1)
       js-yaml: 3.14.1
@@ -1516,7 +1519,7 @@ packages:
   /@textlint/source-code-fixer@14.0.2:
     resolution: {integrity: sha512-eMNStKpBLr8cS8EzUtpV6l1dZ/tglBT+/yJFXMJSk3pmSCQwNbiZTnDbi77Nvgei4e4A9u6PPqhwcRo2W9ZfsQ==}
     dependencies:
-      '@textlint/types': 14.0.2
+      '@textlint/types': 14.8.4
       debug: 4.3.4(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
@@ -1568,11 +1571,10 @@ packages:
       '@textlint/ast-node-types': 13.4.1
     dev: true
 
-  /@textlint/types@14.0.2:
-    resolution: {integrity: sha512-0dXRXqjOeIxw0R7Gq3IVtq7Hr4jXkcpe5XMcouiGuSI9K8Jf+93ycaTzTg+QLiqmWMFz/ERcNPTVGf+6JBRt3g==}
+  /@textlint/types@14.8.4:
+    resolution: {integrity: sha512-9nyY8vVXlr8hHKxa6+37omJhXWCwovMQcgMteuldYd4dOxGm14AK2nXdkgtKEUQnzLGaXy46xwLCfhQy7V7/YA==}
     dependencies:
-      '@textlint/ast-node-types': 14.0.2
-    dev: false
+      '@textlint/ast-node-types': 14.8.4
 
   /@textlint/utils@13.4.1:
     resolution: {integrity: sha512-wX8RT1ejHAPTDmqlzngf0zI5kYoe3QvGDcj+skoTxSv+m/wOs/NyEr92d+ahCP32YqFYzXlqU7aDx2FkULKT+g==}
@@ -3452,7 +3454,7 @@ packages:
       '@textlint/module-interop': 14.0.2
       '@textlint/textlint-plugin-markdown': 14.0.2
       '@textlint/textlint-plugin-text': 14.0.2
-      '@textlint/types': 14.0.2
+      '@textlint/types': 14.8.4
       '@textlint/utils': 14.0.2
       debug: 4.3.4(supports-color@8.1.1)
       file-entry-cache: 5.0.1
