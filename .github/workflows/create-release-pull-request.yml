@@ -36,7 +36,7 @@ jobs:
         run: pnpm version "${{ inputs.semver }}" --no-git-tag-version
       - name: Set package version
         run: echo "PACKAGE_VERSION=$(cat package.json | jq -r '.version')" >> "$GITHUB_ENV"
-      - uses: peter-evans/create-pull-request@v5
+      - uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-paths: |
