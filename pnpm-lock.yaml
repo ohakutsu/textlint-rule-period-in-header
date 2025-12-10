@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^13.4.1
     version: 13.4.1
   prettier:
-    specifier: ^3.1.1
-    version: 3.1.1
+    specifier: ^3.7.4
+    version: 3.7.4
   textlint-scripts:
     specifier: ^13.4.1
     version: 13.4.1(typescript@5.9.3)
@@ -3027,8 +3027,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: false
 
-  /prettier@3.1.1:
-    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+  /prettier@3.7.4:
+    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
