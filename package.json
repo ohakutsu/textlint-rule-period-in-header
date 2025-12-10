@@ -33,7 +33,7 @@
     "check-ends-with-period": "^3.0.2"
   },
   "devDependencies": {
-    "@textlint/types": "^13.4.1",
+    "@textlint/types": "^15.5.0",
     "prettier": "^3.1.1",
     "textlint-scripts": "^13.4.1",
     "textlint-tester": "^13.4.1",
