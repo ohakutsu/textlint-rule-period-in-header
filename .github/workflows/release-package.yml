@@ -19,7 +19,7 @@ jobs:
     outputs:
       exists-tag: ${{ steps.check-tag.outputs.result }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Set package version
         run: echo "PACKAGE_VERSION=$(cat package.json | jq -r '.version')" >> "$GITHUB_ENV"
       - name: Check tag
@@ -46,7 +46,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v4
         with:
